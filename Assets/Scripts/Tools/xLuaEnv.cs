@@ -14,24 +14,14 @@ public class XLuaEnv
     {
         get
         {
-            if (!_Instance)
-            {
-                _Instance = new XLuaEnv();
-            }
-
-            return _Instance;
-        }
-
-        set
-        {
-            _Instance = value;
+            return _Instance = _Instance == null ? new XLuaEnv() : _Instance;
         }
     }
 
     #endregion
 
     #region lua environment
-    private LuaEnv _Env;
+    private LuaEnv _Env = null;
     private XLuaEnv()
     {
         _Env = new LuaEnv();
@@ -52,7 +42,7 @@ public class XLuaEnv
     // 释放lua环境
     public void Free()
     {
-        if (_Env)
+        if (_Env != null)
         {
             _Env.Dispose();
         }

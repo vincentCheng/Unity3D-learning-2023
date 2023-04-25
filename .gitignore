@@ -4,3 +4,7 @@ Assets/XLua/
 Library/
 Temp/
 Build/
+
+*.sln
+*.csproj
+*.cache
