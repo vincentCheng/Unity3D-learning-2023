@@ -1,0 +1,6 @@
+.vscode/
+Assets/XLua/
+**/*.meta
+Library/
+Temp/
+Build/
