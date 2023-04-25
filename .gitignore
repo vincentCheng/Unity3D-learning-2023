@@ -8,3 +8,4 @@ Build/
 *.sln
 *.csproj
 *.cache
+*.log
